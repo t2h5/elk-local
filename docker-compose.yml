@@ -12,12 +12,12 @@ services:
       - '9200:9200'
       - '9300:9300'
   logstash:
-    image: docker.elastic.co/logstash/logstash:6.3.2
+    image: docker.elastic.co/logstash/logstash:7.1.1
     restart: 'no'
     links:
       - elasticsearch
   kibana:
-    image: docker.elastic.co/kibana/kibana:6.3.2
+    image: docker.elastic.co/kibana/kibana:7.1.1
     restart: 'no'
     ports:
       - '5601:5601'
